@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Assignment1.AddNewProductPage"
+             BackgroundColor="White"
+             Title="Add New Product">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Save" Order="Primary" Clicked="ToolbarItem_Clicked"></ToolbarItem>
+        <ToolbarItem Text="Cancel" Order="Primary" Clicked="ToolbarItem_Clicked"></ToolbarItem>
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <TableView>
+            <TableRoot>
+                <TableSection Title="NEW PRODUCT">
+                    <EntryCell x:Name="pName" Label="Product Name  " LabelColor="Black" Placeholder="Enter Product Name"></EntryCell>
+                    <EntryCell x:Name="pPrice" Label="Price                  " LabelColor="Black" Placeholder="Enter Product Price"></EntryCell>
+                    <EntryCell x:Name="pQty" Label="Quantity             " LabelColor="Black" Placeholder="Enter Product Quantity"></EntryCell>
+                </TableSection>
+                
+            </TableRoot>
+        </TableView>
+    </ContentPage.Content>
+</ContentPage>

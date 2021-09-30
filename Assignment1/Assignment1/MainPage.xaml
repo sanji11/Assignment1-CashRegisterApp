@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Assignment1.MainPage"
+             Title="Cash Register App">
+
+    <Grid RowSpacing="10" ColumnSpacing="10" Padding="40">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="4*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Label x:Name="Name" Grid.Row="0" Grid.ColumnSpan="3" Text="Type" TextColor="Black" VerticalOptions="Center" FontSize="25"></Label>
+        <Button Grid.Row="0" Grid.Column="2" Grid.ColumnSpan="2" Text="Manager" BackgroundColor="Red" TextColor="Blue" BorderRadius="30" Clicked="ManagerButton_Clicked"/>
+
+
+        <Button Grid.Row="1" Grid.Column="0" FontSize="30" BorderRadius ="30" BackgroundColor="White" Text="1" Clicked="NumberButton_Clicked"></Button>
+        <Button Grid.Row="1" Grid.Column="1" FontSize="30" BorderRadius ="30" BackgroundColor="White" Text="2" Clicked="NumberButton_Clicked"></Button>
+        <Button Grid.Row="1" Grid.Column="2" FontSize="30" BorderRadius ="30" BackgroundColor="White" Text="3" Clicked="NumberButton_Clicked"></Button>
+        <Label x:Name="Total" Grid.Row="1" Grid.Column="3" FontSize="25" Text="Total" TextColor="Black"></Label>
+
+        <Button Grid.Row="2" Grid.Column="0" FontSize="30" BorderRadius ="30" BackgroundColor="White" Text="4" Clicked="NumberButton_Clicked"></Button>
+        <Button Grid.Row="2" Grid.Column="1" FontSize="30" BorderRadius ="30" BackgroundColor="White" Text="5" Clicked="NumberButton_Clicked"></Button>
+        <Button Grid.Row="2" Grid.Column="2" FontSize="30" BorderRadius ="30" BackgroundColor="White" Text="6" Clicked="NumberButton_Clicked"></Button>
+        <Button Grid.Row="2" Grid.Column="3" Grid.RowSpan="2" FontSize="20" BorderRadius ="30" BackgroundColor="Blue" Text="Buy" FontAttributes="Bold" Clicked="BuyButton_Clicked"></Button>
+
+        <Button Grid.Row="3" Grid.Column="0" FontSize="30" BorderRadius ="30" BackgroundColor="White" Text="7" Clicked="NumberButton_Clicked"></Button>
+        <Button Grid.Row="3" Grid.Column="1" FontSize="30" BorderRadius ="30" BackgroundColor="White" Text="8" Clicked="NumberButton_Clicked"></Button>
+        <Button Grid.Row="3" Grid.Column="2" FontSize="30" BorderRadius ="30" BackgroundColor="White" Text="9" Clicked="NumberButton_Clicked"></Button>
+
+        <Button Grid.Row="4" Grid.Column="1" FontSize="30" BorderRadius ="30" BackgroundColor="White" Text="0" Clicked="NumberButton_Clicked"></Button>
+
+        <Label x:Name="Quantity" Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="3" Text="Quantity" TextColor="Black" FontSize="25"></Label>
+
+        <ListView x:Name="myList"  Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="4" ItemSelected="myList_ItemSelected">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid Padding="2" BackgroundColor="White">
+                            <Label Grid.Column="0" Text="{Binding name}"  FontAttributes="Bold" TextColor="Black"></Label>
+                            <Label Grid.Row="1" Text="{Binding price}"  TextColor="Red" />
+                            <Label Grid.Column="4" Text ="{Binding quantity}" FontAttributes="Bold" TextColor="Black" VerticalOptions="End"></Label>
+                            
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+    </Grid>
+
+</ContentPage>
