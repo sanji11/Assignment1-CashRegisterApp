@@ -11,9 +11,7 @@
                 <RowDefinition Height="*"></RowDefinition>
                 <RowDefinition Height="10*"></RowDefinition>
             </Grid.RowDefinitions>
-            <Grid.ColumnDefinitions>
-                
-            </Grid.ColumnDefinitions>
+            
             <Entry x:Name="NewQuantity" Placeholder="Enter New Quantity" ClearButtonVisibility="WhileEditing"></Entry>
             <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Grid.Row="1">
                 <Button Text="Restock" TextColor="Blue" Clicked="RestockButton_Clicked"></Button>
