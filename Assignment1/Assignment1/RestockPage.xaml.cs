@@ -39,8 +39,6 @@ namespace Assignment1
                     //Reset the variables
                     //NewQuantity.Text = "";
                     selectedProduct = null;
-
-
                 }
                 else
                 {

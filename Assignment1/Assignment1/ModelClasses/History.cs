@@ -8,7 +8,6 @@ namespace Assignment1
     {
         public double totalPrice { get; set; }
         public DateTime date { get; set; }
-
         public History(string name, int qty, double tPrice, DateTime dt) : base(name, qty)
         {
             totalPrice = tPrice;
